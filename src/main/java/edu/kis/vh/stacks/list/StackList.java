@@ -3,7 +3,7 @@ package edu.kis.vh.stacks.list;
 public class StackList {
 
 	private static final int EMPTY_STACK_INDICATOR = -1;
-	Node last;
+	private Node last;
 	int i;
 
 	public void pushElement(int i) {
