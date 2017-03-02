@@ -78,3 +78,6 @@ public class stackTest {
 	}
 
 }
+
+// kombinacje alt + -> oraz alt + <- służą do nawigowania wśród odwiedzonych lokacji - plików
+// nawigacja prowadzi do miejsca w którym został pozostawiony kursor w danym pliku
