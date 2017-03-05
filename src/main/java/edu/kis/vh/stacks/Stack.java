@@ -35,4 +35,8 @@ public class Stack {
 		return items[total--];
 	}
 
+	public int getTotal() {
+		return total;
+	}
+
 }
