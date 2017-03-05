@@ -15,10 +15,6 @@ class Node {
 		return value;
 	}
 
-	void setValue(int value) {
-		this.value = value;
-	}
-
 	Node getPrev() {
 		return prev;
 	}
