@@ -1,7 +1,39 @@
 package edu.kis.vh.stacks.list;
 
 public class StackList {
+	private class Node {
 
+		private final int value; // w związku z hermetyzacją, w klasie StackList dostęp do 
+							// tego pola jest poprzez getter, a nie bezpośrednio
+		private Node prev;
+		private Node next;
+
+		Node(int i) {
+			value = i;
+		}
+
+		int getValue() {
+			return value;
+		}
+
+		Node getPrev() {
+			return prev;
+		}
+
+		void setPrev(Node prev) {
+			this.prev = prev;
+		}
+
+		Node getNext() {
+			return next;
+		}
+
+		void setNext(Node next) {
+			this.next = next;
+		}
+
+	}
+	
 	private static final int EMPTY_STACK_INDICATOR = -1;
 	private Node last;
 	int i;
