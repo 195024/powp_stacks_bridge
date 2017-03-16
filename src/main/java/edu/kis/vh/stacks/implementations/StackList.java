@@ -36,10 +36,8 @@ public class StackList implements IStackImplMethod {
 
 	}
 	
-	private static final int EMPTY_STACK_INDICATOR = -1;
 	private Node last;
-	int i;
-	private int total = EMPTY_STACK_INDICATOR;
+	private int total = IStackImplMethod.EMPTY_STACK_INDICATOR;
 	
 	public void push(int i) {
 		if (last == null)
