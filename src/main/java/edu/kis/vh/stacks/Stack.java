@@ -9,34 +9,41 @@ public class Stack {
 	private final int[] items = new int[SIZE];
 
 	private int total = EMPTY_STACK_INDICATOR;
+	
+	private StackArray stackArray;
+
+	public Stack() {
+		super();
+		this.stackArray = new StackArray();
+	}
+	
+	public Stack(StackArray stackArray) {
+		super();
+		this.stackArray = stackArray;
+	}
 
 	public void push(int i) {
-		if (!isFull())
-			items[++total] = i;
+		stackArray.push(i);
 	}
 
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_INDICATOR;
+		return stackArray.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return stackArray.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return EMPTY_STACK_INDICATOR;
-		return items[total];
+		return stackArray.top();
 	}
 
 	public int pop() {
-		if (isEmpty())
-			return EMPTY_STACK_INDICATOR;
-		return items[total--];
+		return stackArray.pop();
 	}
 
 	public int getTotal() {
-		return total;
+		return stackArray.getTotal();
 	}
 
 }
