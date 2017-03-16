@@ -47,3 +47,4 @@ public class Stack {
 	}
 
 }
+// opcja Navigate -> Open Declaration przenosi widok do deklaracji zaznaczonej metody
