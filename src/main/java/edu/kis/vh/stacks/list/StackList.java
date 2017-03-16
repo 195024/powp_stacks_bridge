@@ -37,7 +37,8 @@ public class StackList {
 	private static final int EMPTY_STACK_INDICATOR = -1;
 	private Node last;
 	int i;
-
+	private int total = EMPTY_STACK_INDICATOR;
+	
 	public void pushElement(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -46,8 +47,13 @@ public class StackList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		total++;
 	}
 
+	public int getTotal() {
+		return total;
+	}
+	
 	public boolean isEmpty() {
 		return last == null;
 	}
@@ -67,6 +73,7 @@ public class StackList {
 			return EMPTY_STACK_INDICATOR;
 		int ret = last.getValue();
 		last = last.getPrev();
+		total--;
 		return ret;
 	}
 
