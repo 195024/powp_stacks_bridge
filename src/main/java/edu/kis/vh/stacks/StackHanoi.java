@@ -8,6 +8,14 @@ package edu.kis.vh.stacks;
 public class StackHanoi extends Stack {
 	private int totalRejected = 0;
 
+	public StackHanoi() {
+		super();
+	}
+
+	public StackHanoi(IStackImplMethod items) {
+		super(items);
+	}
+
 	public int reportRejected() {
 		return totalRejected;
 	}
