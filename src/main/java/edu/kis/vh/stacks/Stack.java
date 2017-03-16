@@ -42,3 +42,4 @@ public class Stack {
 
 }
 // opcja Navigate -> Open Declaration przenosi widok do deklaracji zaznaczonej metody
+// zamiana w punkcie 3.1.6 pozwala na łatwe dobranie implementacji stosu, albo tablica albo lista, zaleta polimorfizmu
