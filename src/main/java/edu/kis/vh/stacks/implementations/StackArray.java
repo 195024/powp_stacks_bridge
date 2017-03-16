@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.implementations;
 
 import edu.kis.vh.stacks.IStackImplMethod;
 
