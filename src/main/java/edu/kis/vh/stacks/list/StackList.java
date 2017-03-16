@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.IStackImplMethod;
+
+public class StackList implements IStackImplMethod {
 	private class Node {
 
 		private final int value; // w związku z hermetyzacją, w klasie StackList dostęp do 
@@ -39,7 +41,7 @@ public class StackList {
 	int i;
 	private int total = EMPTY_STACK_INDICATOR;
 	
-	public void pushElement(int i) {
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -62,7 +64,7 @@ public class StackList {
 		return false;
 	}
 
-	public int peek() {
+	public int top() {
 		if (isEmpty())
 			return EMPTY_STACK_INDICATOR;
 		return last.getValue();
