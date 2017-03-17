@@ -3,19 +3,32 @@ package edu.kis.vh.stacks.demo;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.IStacksFactory;
+import edu.kis.vh.stacks.factory.StackArraysFactory;
+import edu.kis.vh.stacks.factory.StackListsFactory;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
-
-		Stack[] stacks = testStacks(factory);
-
+		DefaultStacksFactory defaultStacksFactory = new DefaultStacksFactory();
+		System.out.println("DefaultStacksFactory");
+		Stack[] stacks = testStacks(defaultStacksFactory);
 		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
-
+		System.out.println();
+		
+		StackListsFactory stackListsFactory = new StackListsFactory();
+		System.out.println("StackListsFactory");
+		Stack[] stackLists = testStacks(stackListsFactory);
+		System.out.println("total rejected is " + ((StackHanoi) stackLists[3]).reportRejected());
+		System.out.println();
+		
+		StackArraysFactory stackArraysFactory = new StackArraysFactory();
+		System.out.println("StackArraysFactory");
+		Stack[] stackArrays = testStacks(stackArraysFactory);
+		System.out.println("total rejected is " + ((StackHanoi) stackArrays[3]).reportRejected());
 	}
 
-	private static Stack[] testStacks(DefaultStacksFactory factory) {
+	private static Stack[] testStacks(IStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 

@@ -1,10 +1,10 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.implementations.StackArray;
+import edu.kis.vh.stacks.implementations.StackList;
 
 public class StackFIFO extends Stack {
 
-	private final StackArray temp = new StackArray();
+	private final StackList temp = new StackList();
 
 	public StackFIFO() {
 		super();
@@ -27,3 +27,4 @@ public class StackFIFO extends Stack {
 
 // Lab2 3.1.14
 // Lepszym wyborem będzie StackArray, gdyż operacje pop i push są mniej kosztowne
+// aczkolwiek przy narzuconym niskim rozmiarze StackArray, lepszym wyborem będzie StackList o dynamicznym rozmiarze.
