@@ -1,8 +1,10 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementations.StackArray;
+
 public class StackFIFO extends Stack {
 
-	private final Stack temp = new Stack();
+	private final StackArray temp = new StackArray();
 
 	public StackFIFO() {
 		super();
@@ -22,3 +24,6 @@ public class StackFIFO extends Stack {
 		return ret;
 	}
 }
+
+// Lab2 3.1.14
+// Lepszym wyborem będzie StackArray, gdyż operacje pop i push są mniej kosztowne
