@@ -10,25 +10,18 @@ import edu.kis.vh.stacks.factory.StackListsFactory;
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory defaultStacksFactory = new DefaultStacksFactory();
 		System.out.println("DefaultStacksFactory");
-		Stack[] stacks = testStacks(defaultStacksFactory);
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
-		System.out.println();
+		testStacks(new DefaultStacksFactory());
 		
-		StackListsFactory stackListsFactory = new StackListsFactory();
 		System.out.println("StackListsFactory");
-		Stack[] stackLists = testStacks(stackListsFactory);
-		System.out.println("total rejected is " + ((StackHanoi) stackLists[3]).reportRejected());
-		System.out.println();
+		testStacks(new StackListsFactory());
 		
-		StackArraysFactory stackArraysFactory = new StackArraysFactory();
 		System.out.println("StackArraysFactory");
-		Stack[] stackArrays = testStacks(stackArraysFactory);
-		System.out.println("total rejected is " + ((StackHanoi) stackArrays[3]).reportRejected());
+		testStacks(new StackArraysFactory());
+
 	}
 
-	private static Stack[] testStacks(IStacksFactory factory) {
+	private static void testStacks(IStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 
@@ -39,13 +32,15 @@ class StacksDemo {
 		java.util.Random rn = new java.util.Random();
 		for (int i = 1; i < 15; i++)
 			stacks[3].push(rn.nextInt(20));
-
+		
 		for (int i = 0; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
 				System.out.print(stacks[i].pop() + "  ");
 			System.out.println();
 		}
-		return stacks;
+		
+		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println();
 	}
 
 }
