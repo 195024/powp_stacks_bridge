@@ -48,3 +48,6 @@ public class Stack {
 // Navigate -> Quick Type Hierarchy (ctrl+t) wyświetla podręczne okienko z typami implementującymi lub definującymi zaznaczoną wywoływaną metodą
 // przytrzymanie przycisku Ctrl na zaznaczonym wywołaniu metody wyświetla małe okienko pozwalające albo przejść do deklaracji metody (F3), albo
 // wyświetlić Quick Type Hierarchy (ctrl+t)
+
+// 3.1.17
+// Klasy fabryk łamią zasadę izolacji, gdyż od ich wewnętrznej implementacji zależy którą abstrakcję wyprodukują.
