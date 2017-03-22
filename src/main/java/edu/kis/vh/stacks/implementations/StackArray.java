@@ -32,7 +32,7 @@ public class StackArray implements IStackImplMethod {
 	 */
 	@Override
 	public boolean isFull() {
-		return total == 11;
+		return total == (SIZE - 1);
 	}
 
 	/* (non-Javadoc)
